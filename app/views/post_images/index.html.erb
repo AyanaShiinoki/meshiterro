@@ -21,12 +21,14 @@
                   </h3>
                   <p><%= post_image.caption %></p>
                   <ul class="inline-meta">
+                  <!--5-4　変更  -->
                     <li>By
                       <%= post_image.user.name %>
                     </li>
                     <li>
-                    <a href="#">23 コメント</a>
+                    <%= link_to "#{post_image.post_comments.count} コメント", post_image_path(post_image.id) %>
                     </li>
+                  <!-- 5-4　変更 -->
                   </ul>
                 </div>
               </div>
